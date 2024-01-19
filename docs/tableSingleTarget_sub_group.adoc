@@ -12,7 +12,7 @@ s|Types | |
  
 
 s|Variables | |
- |#{var}string single_target_detection_algorithm(ping_time,beam)# |#MA# |#The name of the algorithm used for the single target detecion. Supported algorithms, for which parameters are defined in the single_target subgroup of the beam group, are "" and "".#
+ |#{var}string single_target_detection_algorithm(ping_time,beam)# |#MA# |#The name of the algorithm used for the single target detecion. Supported algorithms, for which parameters are defined in the single_target subgroup of the beam group, are "Soule1997" and "Handegard2005".#
  3+|#{attr}:long_name = "Single target detection algorithm"#
  
  |#{var}target_modified_t single_target_modified(ping_time,beam)# |#MA# |#Indicates whether or not the single target detection has been manually modified.#
