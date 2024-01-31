@@ -19,7 +19,7 @@ s|Variables | |
  |{var}target_identifier *single_target_identifier*(ping_time,beam) |MA |Label of single target detected and possibly tracked on multiple pings. All single targets have a new unique identifier when detected, if a tracking algorithm is used the identifier of a new target can be changed to an existing one so that it can be identified as the same target.
  3+|{attr}:long_name = "Index of single target detected"
  
- |#{var}string *single_target_detection_algorithm*(ping_time,beam)# |#MA# |#The name of the algorithm used for the single target detecion. Supported algorithms, for which parameters are defined in the single_target subgroup of the beam group, are "Soule1997" and "Handegard2005".#
+ |#{var}string *single_target_detection_algorithm*(ping_time,beam)# |#MA# |#The name of the algorithm used for the single target detecion for this ping and beam.#
  3+|#{attr}:long_name = "Single target detection algorithm"#
  
  |#{var}target_range *single_target_range*(ping_time,beam)# |#MA# |#Range from the transducer face to the detected single target obtained using the algorithm given by single_target_detection_algorithm with the corresponding parameters, or purely by manual tagging if indicated by target_modified and single_target_range_unmodified has missing value. Missnig value indicates that the target was manually deleted.#
@@ -49,19 +49,19 @@ s|Variables | |
  3+|#{attr}:units = "m"#
  3+|#{attr}:long_name = "Stop range to single target detected before any manual modification"#
 
+ |#{var}float *nominal_frequency(beam)*#|O |
+ 3+|#{attr}:long_name = "Nominal acoustic frequency"#
+ 3+|#{attr}:standard_name = "sound_frequency"#
+ 3+|#{attr}:units = "Hz"#
+ 3+|#{attr}float :valid_min = 0.0#
 
 
 
-|{var}target_angle *single_target_alongship_angle*(ping_time,beam) |MA |Angle of single target detected in the minor beam coordinate.
+
+
+ |{var}target_angle *single_target_alongship_angle*(ping_time,beam) |MA |Angle of single target detected in the minor beam coordinate.
  3+|{attr}:units = "arc_degree"
  3+|{attr}:long_name = "Single target arrival angle in the minor beam coordinate"
-
- |{var}float *center_frequency*|O |
- 3+|{attr}:long_name = "Center acoustic frequency" 
- 3+|{attr}:standard_name = "sound_frequency" 
- 3+|{attr}:units = "Hz" 
- 3+|{attr}float :valid_min = 0.0 
-
 
 |{var}target_angle *single_target_alongship_angle*(ping_time,beam) |MA |Angle of single target detected in the minor beam coordinate.
  3+|{attr}:units = "arc_degree"
