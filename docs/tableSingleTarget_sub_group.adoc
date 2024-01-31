@@ -52,9 +52,9 @@ s|Variables | |
 
 
 
-|#{var}target_angle *single_target_alongship_angle*(ping_time,beam) |MA |Angle of single target detected in the minor beam coordinate.#
- 3+|#{attr}:units = "arc_degree"#
- 3+|#{attr}:long_name = "Single target arrival angle in the minor beam coordinate"#
+|{var}target_angle *single_target_alongship_angle*(ping_time,beam) |MA |Angle of single target detected in the minor beam coordinate.
+ 3+|{attr}:units = "arc_degree"
+ 3+|{attr}:long_name = "Single target arrival angle in the minor beam coordinate"
 
  |{var}float *center_frequency*|O |
  3+|{attr}:long_name = "Center acoustic frequency" 
