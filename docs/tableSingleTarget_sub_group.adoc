@@ -16,40 +16,40 @@ s|Variables | |
  3+|{attr}:long_name = "Number of single target detection in each beam, per ping"
  3+|{attr}int :valid_min = 0
 
- |{var}target_identifier *single_target_identifier*(ping_time,beam) |MA |Label of single target detected and possibly tracked on multiple pings. All single targets have a new unique identifier when detected, if a tracking algorithm is used the identifier of a new target can be changed to an existing one so that it can be identified as the same target.
+ |{var}target_identifier *single_target_identifier*(ping_time, beam) |MA |Label of single target detected and possibly tracked on multiple pings. All single targets have a new unique identifier when detected, if a tracking algorithm is used the identifier of a new target can be changed to an existing one so that it can be identified as the same target.
  3+|{attr}:long_name = "Index of single target detected"
  
- |#{var}string *single_target_detection_algorithm*(ping_time,beam)# |#MA# |#The name of the algorithm used for the single target detecion for this ping and beam.#
+ |#{var}string *single_target_detection_algorithm*(ping_time, beam)# |#MA# |#The name of the algorithm used for the single target detecion for this ping and beam.#
  3+|#{attr}:long_name = "Single target detection algorithm"#
  
- |#{var}target_range *single_target_range*(ping_time,beam)# |#MA# |#Range from the transducer face to the detected single target obtained using the algorithm given by single_target_detection_algorithm with the corresponding parameters, or purely by manual tagging if indicated by target_modified and single_target_range_unmodified has missing value. Missnig value indicates that the target was manually deleted.#
+ |#{var}target_range *single_target_range*(ping_time, beam)# |#MA# |#Range from the transducer face to the detected single target obtained using the algorithm given by single_target_detection_algorithm with the corresponding parameters, or purely by manual tagging if indicated by target_modified and single_target_range_unmodified has missing value. Missnig value indicates that the target was manually deleted.#
  3+|#{attr}:units = "m"#
  3+|#{attr}:long_name = "Range to single target detected"#
  
- |#{var}target_range *single_target_start_range*(ping_time,beam)# |#MA# |#Range from the transducer face to the start of the acoustic backscatter from the single target.#
+ |#{var}target_range *single_target_start_range*(ping_time, beam)# |#MA# |#Range from the transducer face to the start of the acoustic backscatter from the single target.#
  3+|#{attr}:units = "m"#
  3+|#{attr}:long_name = "Start range to single target detected"#
  
- |#{var}target_range *single_target_stop_range*(ping_time,beam)# |#MA# |#Range from the transducer face to the end of the acoustic backscatter from the single target.#
+ |#{var}target_range *single_target_stop_range*(ping_time, beam)# |#MA# |#Range from the transducer face to the end of the acoustic backscatter from the single target.#
  3+|#{attr}:units = "m"#
  3+|#{attr}:long_name = "Stop range to single target detected"#
  
- |#{var}target_modified_t *single_target_modified*(ping_time,beam)# |#MA# |#Indicates whether or not the single target detection has been manually modified.#
+ |#{var}target_modified_t *single_target_modified*(ping_time, beam)# |#MA# |#Indicates whether or not the single target detection has been manually modified.#
  3+|#{attr}:long_name = "Single target manually modified (or not)"#
  
- |#{var}target_range *single_target_range_unmodified*(ping_time,beam)# |#MA# |#Range from the transducer face to the detected single target before manual modification. Missing value indicates that the detecion is purely manual.#
+ |#{var}target_range *single_target_range_unmodified*(ping_time, beam)# |#MA# |#Range from the transducer face to the detected single target before manual modification. Missing value indicates that the detecion is purely manual.#
  3+|#{attr}:units = "m"#
  3+|#{attr}:long_name = "Range of single target detected before any manual modification"#
  
- |#{var}target_range *single_target_start_range_unmodified*(ping_time,beam)# |#MA# |#Range from the transducer face to the start of the acoustic backscatter from the single target before manual modification. Missing value indicates that the detecion is purely manual.#
+ |#{var}target_range *single_target_start_range_unmodified*(ping_time, beam)# |#MA# |#Range from the transducer face to the start of the acoustic backscatter from the single target before manual modification. Missing value indicates that the detecion is purely manual.#
  3+|#{attr}:units = "m"#
  3+|#{attr}:long_name = "Start range to single target detected before any manual modification"#
  
- |#{var}target_range *single_target_stop_range_unmodified*(ping_time,beam)# |#MA# |#Range from the transducer face to the end of the acoustic backscatter from the single target before manual modification. Missing value indicates that the detecion is purely manual.#
+ |#{var}target_range *single_target_stop_range_unmodified*(ping_time, beam)# |#MA# |#Range from the transducer face to the end of the acoustic backscatter from the single target before manual modification. Missing value indicates that the detecion is purely manual.#
  3+|#{attr}:units = "m"#
  3+|#{attr}:long_name = "Stop range to single target detected before any manual modification"#
 
- |#{var}float *nominal_frequency(beam)*#|O |
+ |#{var}float *nominal_frequency(beam)*#|O |#The nominal frequency of the beam.#
  3+|#{attr}:long_name = "Nominal acoustic frequency"#
  3+|#{attr}:standard_name = "sound_frequency"#
  3+|#{attr}:units = "Hz"#
@@ -59,49 +59,49 @@ s|Variables | |
 
 
 
- |{var}target_angle *single_target_alongship_angle*(ping_time,beam) |MA |Angle of single target detected in the minor beam coordinate.
+ |{var}target_angle *single_target_alongship_angle*(ping_time, beam) |MA |Angle of single target detected in the minor beam coordinate.
  3+|{attr}:units = "arc_degree"
  3+|{attr}:long_name = "Single target arrival angle in the minor beam coordinate"
 
-|{var}target_angle *single_target_alongship_angle*(ping_time,beam) |MA |Angle of single target detected in the minor beam coordinate.
+|{var}target_angle *single_target_alongship_angle*(ping_time, beam) |MA |Angle of single target detected in the minor beam coordinate.
  3+|{attr}:units = "arc_degree"
  3+|{attr}:long_name = "Single target arrival angle in the minor beam coordinate"
  3+|{attr}float :valid_range = −180.0, 180.0
 
- |{var}target_angle *single_target_athwartship_angle*(ping_time,beam) |MA |Angle of single target detected in the major beam coordinate.
+ |{var}target_angle *single_target_athwartship_angle*(ping_time, beam) |MA |Angle of single target detected in the major beam coordinate.
  3+|{attr}:units = "arc_degree"
  3+|{attr}:long_name = "Single target arrival angle in the major beam coordinate"
  3+|{attr}float :valid_range = −180.0, 180.0
 
- |{var}target_TS *compensated_TS*(ping_time,beam,frequency) |MA |Calculated beam compensated Target Strength.
+ |{var}target_TS *compensated_TS*(ping_time, beam, frequency) |MA |Calculated beam compensated Target Strength.
  3+|{attr}:units = "dB"
  3+|{attr}:long_name = "Calculated Target Strength (re 1 m^2^) after compensation for off-axis angle for each frequency of the receive echo from spectral analysis of the FM pulse or frequency of the CW pulse"
 
- |{var}target_TS *uncompensated_TS*(ping_time,beam,frequency) |MA |Calculated beam uncompensated Target Strength.
+ |{var}target_TS *uncompensated_TS*(ping_time, beam, frequency) |MA |Calculated beam uncompensated Target Strength.
  3+|{attr}:units = "dB"
  3+|{attr}:long_name = "Calculated Target Strength (re 1 m^2^) uncompensated for off-axis angle for each frequency of the receive echo from spectral analysis of the FM pulse or frequency of the CW pulse"
  
  
  
- |{var}float *param_TS_threshold*(ping_time,beam) |MA |TS threshold for single target detection
+ |{var}float *param_TS_threshold*(ping_time, beam) |MA |TS threshold for single target detection
  3+|{attr}:units = "dB"
  3+|{attr}:long_name = "Minimum TS (re 1 m^2^) threshold for single target detection"
  
- |{var}float *param_gain_compensation*(ping_time,beam) |MA |Gain compensation for single target detection
+ |{var}float *param_gain_compensation*(ping_time, beam) |MA |Gain compensation for single target detection
  3+|{attr}:units = "dB"
  3+|{attr}:long_name = "Maximum one-way angular gain compensation for single target detection"
 
- |{var}float *param_minimum_echo_duration*(ping_time,beam) |MA |Minimimum echo duration for single target detection
+ |{var}float *param_minimum_echo_duration*(ping_time, beam) |MA |Minimimum echo duration for single target detection
  3+|{attr}:long_name = "Minimimum normalized echo duration for single target detection relative to nominal pulse duration"
 
- |{var}float *param_maximum_echo_duration*(ping_time,beam) |MA |Maximimum echo duration for single target detection
+ |{var}float *param_maximum_echo_duration*(ping_time, beam) |MA |Maximimum echo duration for single target detection
  3+|{attr}:long_name = "Maximimum normalized echo duration for single target detection relative to nominal pulse duration"
 
- |{var}float *param_maximum_phase_deviation*(ping_time,beam) |MA |Maximimum phase deviation for single target detection
+ |{var}float *param_maximum_phase_deviation*(ping_time, beam) |MA |Maximimum phase deviation for single target detection
  3+|{attr}:units = "arc_degree"
  3+|{attr}:long_name = "Maximimum phase standard deviation for single target detection"
 
- |{var}float *param_minimum_echo_spacing*(ping_time,beam) |MA |Minimum echo spacing for single target detection
+ |{var}float *param_minimum_echo_spacing*(ping_time, beam) |MA |Minimum echo spacing for single target detection
  3+|{attr}:long_name = "Minimum distance between two single targets detected relative to nominal pulse duration"
 
  |{var}float *param_TSf_processing_window_duration*(ping_time, beam) |MA |TS(f) processing window duration.
