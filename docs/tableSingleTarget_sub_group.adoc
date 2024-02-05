@@ -33,21 +33,6 @@ s|Variables | |
  |#{var}target_range *single_target_stop_range*(ping_time, beam)# |#MA# |#Range from the transducer face to the end of the acoustic backscatter from the single target.#
  3+|#{attr}:units = "m"#
  3+|#{attr}:long_name = "Stop range to single target detected"#
- 
- |#{var}target_modified_t *single_target_modified*(ping_time, beam)# |#MA# |#Indicates whether or not the single target detection has been manually modified.#
- 3+|#{attr}:long_name = "Single target manually modified (or not)"#
- 
- |#{var}target_range *single_target_range_unmodified*(ping_time, beam)# |#MA# |#Range from the transducer face to the detected single target before manual modification. Missing value indicates that the detecion is purely manual.#
- 3+|#{attr}:units = "m"#
- 3+|#{attr}:long_name = "Range of single target detected before any manual modification"#
- 
- |#{var}target_range *single_target_start_range_unmodified*(ping_time, beam)# |#MA# |#Range from the transducer face to the start of the acoustic backscatter from the single target before manual modification. Missing value indicates that the detecion is purely manual.#
- 3+|#{attr}:units = "m"#
- 3+|#{attr}:long_name = "Start range to single target detected before any manual modification"#
- 
- |#{var}target_range *single_target_stop_range_unmodified*(ping_time, beam)# |#MA# |#Range from the transducer face to the end of the acoustic backscatter from the single target before manual modification. Missing value indicates that the detecion is purely manual.#
- 3+|#{attr}:units = "m"#
- 3+|#{attr}:long_name = "Stop range to single target detected before any manual modification"#
 
  |#{var}float *nominal_frequency(beam)*#|O |#The nominal frequency of the beam.#
  3+|#{attr}:long_name = "Nominal acoustic frequency"#
