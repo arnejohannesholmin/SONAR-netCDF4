@@ -53,7 +53,7 @@ s|Variables | |
  3+|{attr}:long_name = "Raw backscatter measurements (imaginary part)" 
  2+|{attr}:units = "as appropriate" |Use units appropriate for the data.
  
- |{var}sample_t backscatter_r(ping_time, beam, subbeam) |M |Real part or amplitude or power of backscatter measurements. Each element in the 3D matrix is a variable length vector (of type sample_t) that contains the samples for that beam, ping time, and optionally subbeam.
+ |{var}sample_t backscatter_r(ping_time, beam, subbeam) |M#A# |Real part or amplitude or power of backscatter measurements. Each element in the 3D matrix is a variable length vector (of type sample_t) that contains the samples for that beam, ping time, and optionally subbeam.
  3+|{attr}:long_name = "Raw backscatter measurements (real part)" 
  2+|{attr}:units = "as appropriate" |Use units appropriate for the data.
  
@@ -90,6 +90,12 @@ s|Variables | |
  3+|{attr}:long_name = "Amount of time during reception where samples are discarded" 
  3+|{attr}:units = "s" 
  3+|{attr}:valid_min = "0.0" 
+ 
+  |#{var}float *nominal_frequency(beam)*#|O |#The nominal frequency of the beam.#
+ 3+|#{attr}:long_name = "Nominal acoustic frequency"#
+ 3+|#{attr}:standard_name = "sound_frequency"#
+ 3+|#{attr}:units = "Hz"#
+ 3+|#{attr}float :valid_min = 0.0#
 
  |{var}float calibrated_frequency(frequency) |M |Frequencies for which on-axis gain values have been estimated during the calibration exercise.
  3+|{attr}:long_name = "Calibration gain frequencies" 

@@ -34,19 +34,6 @@ s|Variables | |
  3+|#{attr}:units = "m"#
  3+|#{attr}:long_name = "Stop range to single target detected"#
 
- |#{var}float *nominal_frequency(beam)*#|O |#The nominal frequency of the beam.#
- 3+|#{attr}:long_name = "Nominal acoustic frequency"#
- 3+|#{attr}:standard_name = "sound_frequency"#
- 3+|#{attr}:units = "Hz"#
- 3+|#{attr}float :valid_min = 0.0#
-
-
-
-
-
- |{var}target_angle *single_target_alongship_angle*(ping_time, beam) |MA |Angle of single target detected in the minor beam coordinate.
- 3+|{attr}:units = "arc_degree"
- 3+|{attr}:long_name = "Single target arrival angle in the minor beam coordinate"
 
 |{var}target_angle *single_target_alongship_angle*(ping_time, beam) |MA |Angle of single target detected in the minor beam coordinate.
  3+|{attr}:units = "arc_degree"
