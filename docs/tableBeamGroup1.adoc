@@ -53,7 +53,7 @@ s|Variables | |
  3+|{attr}:long_name = "Raw backscatter measurements (imaginary part)" 
  2+|{attr}:units = "as appropriate" |Use units appropriate for the data.
  
- |{var}sample_t backscatter_r(ping_time, beam, subbeam) |M#A# |Real part or amplitude or power of backscatter measurements. Each element in the 3D matrix is a variable length vector (of type sample_t) that contains the samples for that beam, ping time, and optionally subbeam.
+ |{var}sample_t backscatter_r(ping_time, beam, subbeam) |#MA# |Real part or amplitude or power of backscatter measurements. Each element in the 3D matrix is a variable length vector (of type sample_t) that contains the samples for that beam, ping time, and optionally subbeam.
  3+|{attr}:long_name = "Raw backscatter measurements (real part)" 
  2+|{attr}:units = "as appropriate" |Use units appropriate for the data.
  
